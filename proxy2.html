@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Inbox</title>
     <!-- New favicon link -->
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/defnotchris1/runproxy/refs/heads/main/download-removebg-preview.png">
     <style>
@@ -55,18 +55,18 @@
     <div id="buttonContainer">
         <button class="coolButton" id="toggleButton" onclick="toggleIframe()">Open Woun</button>
     </div>
-    <iframe id="iframe" src="https://classroom.google.com/h"></iframe>
+    <iframe id="iframe" src="https://mail.google.com/"></iframe>
 
     <script>
         function toggleIframe() {
             const iframe = document.getElementById('iframe');
             const button = document.getElementById('toggleButton');
-            if (iframe.src === 'https://classroom.google.com/h') {
+            if (iframe.src === 'https://mail.google.com/') {
                 iframe.src = 'https://woun.math1.4cloud.click/';
-                button.innerText = 'Open Classroom';
+                button.innerText = 'Back to Mail Inbox';
             } else {
-                iframe.src = 'https://classroom.google.com/h';
-                button.innerText = 'Open G?mes';
+                iframe.src = 'https://mail.google.com/';
+                button.innerText = 'Open Woun';
             }
         }
 
@@ -76,9 +76,9 @@
             const button = document.getElementById('toggleButton');
             if (window.location.href === 'https://woun.math1.4cloud.click/up') {
                 iframe.src = 'https://woun.math1.4cloud.click/';
-                button.innerText = 'Back to Classroom';
+                button.innerText = 'Back to Mail Inbox';
                 button.onclick = function() {
-                    window.location.href = 'https://classroom.google.com/h';
+                    window.location.href = 'https://mail.google.com/';
                 };
             }
         };
