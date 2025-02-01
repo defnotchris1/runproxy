@@ -24,21 +24,21 @@
         #buttonContainer {
             position: absolute;
             top: 10px;
-            right: 10px;
+            left: 10px;
             z-index: 10;
         }
         .coolButton {
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;
+            font-size: 14px;
             margin: 4px 2px;
             cursor: pointer;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: 0 4px #999;
         }
         .coolButton:hover {
@@ -47,7 +47,7 @@
         .coolButton:active {
             background-color: #45a049;
             box-shadow: 0 2px #666;
-            transform: translateY(4px);
+            transform: translateY(2px);
         }
     </style>
 </head>
@@ -55,17 +55,17 @@
     <div id="buttonContainer">
         <button class="coolButton" id="toggleButton" onclick="toggleIframe()">Open Woun</button>
     </div>
-    <iframe id="iframe" src="https://classroom.google.com/"></iframe>
+    <iframe id="iframe" src="https://classroom.google.com/h"></iframe>
 
     <script>
         function toggleIframe() {
             const iframe = document.getElementById('iframe');
             const button = document.getElementById('toggleButton');
-            if (iframe.src === 'https://classroom.google.com/') {
+            if (iframe.src === 'https://classroom.google.com/h') {
                 iframe.src = 'https://woun.math1.4cloud.click/';
                 button.innerText = 'Open Classroom';
             } else {
-                iframe.src = 'https://classroom.google.com/';
+                iframe.src = 'https://classroom.google.com/h';
                 button.innerText = 'Open Woun';
             }
         }
@@ -78,7 +78,7 @@
                 iframe.src = 'https://woun.math1.4cloud.click/';
                 button.innerText = 'Back to Classroom';
                 button.onclick = function() {
-                    window.location.href = 'https://classroom.google.com/';
+                    window.location.href = 'https://classroom.google.com/h';
                 };
             }
         };
