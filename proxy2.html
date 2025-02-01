@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inbox</title>
+    <title>Google</title>
     <!-- New favicon link -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/defnotchris1/runproxy/refs/heads/main/download-removebg-preview.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/defnotchris1/runproxy/refs/heads/main/google-removebg-preview.png">
     <style>
         html, body {
             margin: 0;
@@ -31,11 +31,11 @@
             background-color: #4CAF50;
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 5px 10px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 14px;
+            font-size: 12px;
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 8px;
@@ -55,17 +55,17 @@
     <div id="buttonContainer">
         <button class="coolButton" id="toggleButton" onclick="toggleIframe()">Open Woun</button>
     </div>
-    <iframe id="iframe" src="https://mail.google.com/"></iframe>
+    <iframe id="iframe" src="https://google.com/"></iframe>
 
     <script>
         function toggleIframe() {
             const iframe = document.getElementById('iframe');
             const button = document.getElementById('toggleButton');
-            if (iframe.src === 'https://mail.google.com/') {
+            if (iframe.src === 'https://google.com/') {
                 iframe.src = 'https://woun.math1.4cloud.click/';
-                button.innerText = 'Back to Mail Inbox';
+                button.innerText = 'Back to Google';
             } else {
-                iframe.src = 'https://mail.google.com/';
+                iframe.src = 'https://google.com/';
                 button.innerText = 'Open Woun';
             }
         }
@@ -74,11 +74,11 @@
         window.onload = function() {
             const iframe = document.getElementById('iframe');
             const button = document.getElementById('toggleButton');
-            if (window.location.href === 'https://woun.math1.4cloud.click/up') {
+            if (window.location.href === 'https://woun.math1.4cloud.click/') {
                 iframe.src = 'https://woun.math1.4cloud.click/';
-                button.innerText = 'Back to Mail Inbox';
+                button.innerText = 'Back to Google';
                 button.onclick = function() {
-                    window.location.href = 'https://mail.google.com/';
+                    window.location.href = 'https://google.com/';
                 };
             }
         };
