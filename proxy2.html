@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google</title>
+    <title>I-Ready</title>
     <!-- New favicon link -->
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/defnotchris1/runproxy/refs/heads/main/hjhs.png">
     <style>
@@ -61,11 +61,11 @@
         function toggleIframe() {
             const iframe = document.getElementById('iframe');
             const button = document.getElementById('toggleButton');
-            if (iframe.src === 'https://myapps.classlink.com/home') {
+            if (iframe.src === 'https://login.i-ready.com/student/dashboard/home') {
                 iframe.src = 'https://woun.math1.4cloud.click/';
                 button.innerText = 'Back to Google';
             } else {
-                iframe.src = 'https://myapps.classlink.com/home';
+                iframe.src = 'https://login.i-ready.com/student/dashboard/home';
                 button.innerText = 'Open Woun';
             }
         }
@@ -78,7 +78,7 @@
                 iframe.src = 'https://woun.math1.4cloud.click/';
                 button.innerText = 'Back to Google';
                 button.onclick = function() {
-                    window.location.href = 'https://myapps.classlink.com/home';
+                    window.location.href = 'https://login.i-ready.com/student/dashboard/home';
                 };
             }
         };
