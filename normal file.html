@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Fetcher</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            transition: background 0.5s ease;
+        }
+        .coolButton {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 4px #2980b9;
+        }
+        .coolButton:hover {
+            background-color: #2980b9;
+        }
+        .coolButton:active {
+            background-color: #2980b9;
+            box-shadow: 0 2px #1c5e8d;
+            transform: translateY(2px);
+        }
+        #result {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+        }
+        #nameInput {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="nameInput" type="text" placeholder="Enter your name">
+    <button class="coolButton" onclick="fetchIP()">Get Games</button>
+    <div id="result"></div>
+
+    <script>
+        function fetchIP() {
+            const name = document.getElementById('nameInput').value;
+            if (!name) {
+                alert("Please enter your name.");
+                return;
+            }
+            // Fetch the user's IP address from an external API
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the IP address in the result div
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.textContent = `Hello ${name} you just got hacked womp womp! Your IP is ${data.ip} and we now know where you live!`;
+                    // Change the background image
+                    document.body.style.backgroundImage = 'url(https://raw.githubusercontent.com/defnotchris1/runproxy/refs/heads/main/hacker.gif)';
+                })
+                .catch(error => {
+                    console.error('Error fetching the IP address:', error);
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.textContent = 'Failed to fetch IP address.';
+                });
+        }
+    </script>
+</body>
+</html>
