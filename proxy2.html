@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inbox</title>
-    <!-- New favicon link -->
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/defnotchris1/runproxy/refs/heads/main/aviuevtg3-removebg-preview.png">
+    <title>Google</title>
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/defnotchris1/runproxy/refs/heads/main/google-removebg-preview.png">
     <style>
         html, body {
             margin: 0;
@@ -21,67 +21,9 @@
             height: 100%;
             border: none;
         }
-        #buttonContainer {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 10;
-        }
-        .coolButton {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 5px 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 8px;
-            box-shadow: 0 4px #999;
-        }
-        .coolButton:hover {
-            background-color: #45a049;
-        }
-        .coolButton:active {
-            background-color: #45a049;
-            box-shadow: 0 2px #666;
-            transform: translateY(2px);
-        }
     </style>
 </head>
 <body>
-    <div id="buttonContainer">
-        <button class="coolButton" id="toggleButton" onclick="toggleIframe()">Open Woun</button>
-    </div>
-    <iframe id="iframe" src="https://login.i-ready.com/student/dashboard/home"></iframe>
-
-    <script>
-        function toggleIframe() {
-            const iframe = document.getElementById('iframe');
-            const button = document.getElementById('toggleButton');
-            if (iframe.src === 'https://login.i-ready.com/student/dashboard/home') {
-                iframe.src = 'https://woun.math1.4cloud.click/';
-                button.innerText = 'Back to i-Ready';
-            } else {
-                iframe.src = 'https://login.i-ready.com/student/dashboard/home';
-                button.innerText = 'Open Woun';
-            }
-        }
-
-        // Check if the current location is https://woun.math1.4cloud.click/up and adjust the elements accordingly
-        window.onload = function() {
-            const iframe = document.getElementById('iframe');
-            const button = document.getElementById('toggleButton');
-            if (window.location.href === 'https://woun.math1.4cloud.click/up') {
-                iframe.src = 'https://woun.math1.4cloud.click/';
-                button.innerText = 'Back to i-Ready';
-                button.onclick = function() {
-                    window.location.href = 'https://login.i-ready.com/student/dashboard/home';
-                };
-            }
-        };
-    </script>
+    <iframe src="https://www.google.com"></iframe>
 </body>
 </html>
